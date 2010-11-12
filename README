@@ -1,2 +1,7 @@
-Simple HTML expand data plugin
-==============================
+== Simple HTML expand data plugin
+
+This plugin is very simple as for now. It basically allow to put some extra content
+after a table row.
+
+I thought it would be useful for my djangp-admin based CRM site I'm working on, I
+hope to show some integration examples soon.
