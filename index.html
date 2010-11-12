@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Tablas</title>
+        <script type="text/javascript" src="jquery-1.4.3.min.js">
+        </script>
+        <script type="text/javascript" src="jquery-tabledata.js">
+        </script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <style type="text/css" ref="stylesheet">
+            * {
+                font-family: "Verdana";
+                font-size: 13px;
+                /*background: #dea;*/
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Table Staging</h3>
+        <table border="1">
+            <tr>
+            <td>Some<a class="dropdown" href="info">+</a></td>
+            <td>Cool<a class="dropdown" href="info">+</a></td>
+            <td>Stuff<a class="dropdown" href="info">+</a></td>
+            </tr>
+            <tr>
+                <td>Some</td>
+                <td>Cool</td>
+                <td>Stuff</td>
+            </tr>
+        </table>
+    </body>
+    
+    <script type="text/javascript">
+    
+        
+        
+        $(function (){
+
+            $('table:first a.dropdown').cellData({
+                //url: 'http://www.google.com',
+                toggleClass: 'shown',
+                //textShown: '+',
+                textHidden: '-'
+             });
+            
+        });
+    </script>
+</html>

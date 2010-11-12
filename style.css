@@ -1,0 +1,20 @@
+/* Some pretty style for our widget */
+
+a.dropdown {
+    margin: 1px;
+    margin-left: 10px;
+    padding: 1px;
+    padding-right: 16px;
+    background: url('img/bullet_arrow_down.png') no-repeat center right #dec;
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -mozilla-border-radius: 2px;
+}
+a.dropdown.shown {
+    background-image: url('img/bullet_arrow_up.png');
+    background-color: #FFEF9A;
+
+}
