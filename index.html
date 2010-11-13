@@ -46,6 +46,7 @@
                 //textShown: '+',
                 textHidden: '-',
                 //content: "<h3>New Data</h3><p>This is new text</p>"
+                hashPersistant: true,
                 content: function (){
                     var val = Math.floor(Math.random()*100);
                     $(this).html('<p>This is generated every time you show me :) '+ val +'</p>');
@@ -55,6 +56,7 @@
              $('#dropone').cellData({
                  toggleClass: 'shown',
                  content: "This",
+                 
                  textHidden: 'Less'
 
              }).addClass('dropdown');
