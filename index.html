@@ -27,6 +27,12 @@
                 <td>Cool</td>
                 <td>Stuff</td>
             </tr>
+            <tr>
+                <td>X<a id="dropone" href="">More</a></td>
+                <td>Y</td>
+                <td>Z</td>
+                
+            </tr>
         </table>
     </body>
     
@@ -46,6 +52,12 @@
                 }
                 
              });
+             $('#dropone').cellData({
+                 toggleClass: 'shown',
+                 content: "HOla",
+                 textHidden: 'Less',
+
+             }).addClass('dropdown');
             
         });
     </script>
