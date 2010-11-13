@@ -32,15 +32,19 @@
     
     <script type="text/javascript">
     
-        
-        
         $(function (){
 
             $('table:first a.dropdown').cellData({
                 //url: 'http://www.google.com',
                 toggleClass: 'shown',
                 //textShown: '+',
-                textHidden: '-'
+                textHidden: '-',
+                //content: "<h3>New Data</h3><p>This is new text</p>"
+                content: function () {
+                    return "A"
+
+                }
+                
              });
             
         });
