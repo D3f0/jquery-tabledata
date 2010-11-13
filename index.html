@@ -39,23 +39,23 @@
     <script type="text/javascript">
     
         $(function (){
-
+            
             $('table:first a.dropdown').cellData({
                 //url: 'http://www.google.com',
                 toggleClass: 'shown',
                 //textShown: '+',
                 textHidden: '-',
                 //content: "<h3>New Data</h3><p>This is new text</p>"
-                content: function () {
-                    return "A"
-
+                content: function (){
+                    var val = Math.floor(Math.random()*100);
+                    $(this).html('<p>This is generated every time you show me :) '+ val +'</p>');
                 }
                 
              });
              $('#dropone').cellData({
                  toggleClass: 'shown',
-                 content: "HOla",
-                 textHidden: 'Less',
+                 content: "This",
+                 textHidden: 'Less'
 
              }).addClass('dropdown');
             

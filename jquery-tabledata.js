@@ -85,10 +85,24 @@
                 $(this).toggleClass(cfg.toggleClass);
             }
         },
+        /**
+         * Called before.
+         */
         beforeShow: function (evt, $link, cfg){
             console.info("Before show");
+            var $cell = $(this).find('td');
             if (cfg.textHidden){
                 $link.text(cfg.textHidden);
+            }
+            if ($.isFunction(cfg.content)){
+                console.log("Callback for", this, arguments);
+                $cell.text(cfg.content.call(this, $link, cfg));
+            } else {
+                $cell.text(cfg.content);
+            }
+            // Finally invoke the callback
+            if ($.isFunction(cfg.callbackShow)){
+                cfg.callbackShow.apply(this, $link, cfg);
             }
         },
         afterShow: function (evt, $link, cfg) {
@@ -121,6 +135,8 @@
         var default_cfg = {
             url: null,
             refreshOnShow: false,
+            loadingClass: '', // Class to append while loading
+            
             content: '&nbsp', // a string or function
             
             callbackShow: null, // TODO: Implement this!
@@ -136,9 +152,6 @@
 
         return this.each(function (){
             
-//             if ( cfg ) {
-//                 $.extend( default_cfg, cfg);
-//             }
             cfg = $.extend({}, default_cfg, cfg);
 
             console.log("CFG:", cfg);
